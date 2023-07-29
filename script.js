@@ -4,8 +4,11 @@ const viewList = document.querySelector(".list");
 const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const navbar = document.querySelector(".navbar-light");
-const cryptoDataBox = document.querySelector('.rounded-12')
+const cryptoDataBox = document.querySelector('.cryptoBox')
+const dataBox = document.querySelector('.data')
+const cardBody = document.querySelector('.card')
 
+cryptoDataBox.style.width ='18.5rem'
 function toggle() {
   if (
     toggleButton.innerHTML ===
@@ -29,24 +32,22 @@ function toggle() {
 toggleButton.addEventListener("click", toggle);
 viewGrid.style.borderBottom = "2px solid blue";
 function viewGridFunction() {
-  if (viewGrid.style.borderBottom === "") {
+  if (viewGrid.style.borderBottom === "" || cryptoDataBox.style.width ==='100vw') {
     viewGrid.style.borderBottom = "2px solid blue";
     viewList.style.borderBottom = "";
+    cryptoDataBox.style.width = '18.5rem'
+    dataBox.style.flexDirection = 'row'
+    cardBody.style.flexDirection='column'
+    cardBody.style.display= 'flex'
+    cryptoDataBox.style.display ='flex'
+   cryptoDataBox.style.flexDirection='column'
+   cardBody.style.display= ''
+   cardBody.style.gap = ''
   }
 }
 viewGrid.addEventListener("click", viewGridFunction);
 
-function viewListFunction() {
-  if (viewList) {
-    viewList.style.borderBottom = "2px solid blue";
-    viewGrid.style.borderBottom = "";
-    cryptoDataBox.style.width ='100%'
-    cryptoDataBox.style.flexDirecion = ''
-    
-  }
-}
 
-viewList.addEventListener("click", viewListFunction);
 
 async function cryptoData() {
 
@@ -58,7 +59,7 @@ let coinDetails= await response.json()
 let coins=''
 coinDetails.map((i)=>{
   coins+=`
-  <div class="card bg-dark text-light rounded-12 " style="width: 18rem;">
+  <div class="card bg-dark text-light rounded-12 cryptoBox" >
         <div class="image">
           <img
             src=${i.image}
@@ -87,3 +88,20 @@ coinDetails.map((i)=>{
 document.querySelector('.data').innerHTML=coins
 }
 addEventListener('DOMContentLoaded', cryptoData)
+function viewListFunction() {
+  if (viewList || cryptoDataBox.style.width ==='24vw') {
+    viewList.style.borderBottom = "2px solid blue";
+    viewGrid.style.borderBottom = "";
+    cryptoDataBox.style.width ='100%'
+   dataBox.style.flexDirection = 'column'
+   cryptoDataBox.style.display ='flex'
+   cryptoDataBox.style.justifyContent ='center'
+   cryptoDataBox.style.flexDirection='row'
+   cardBody.style.display= 'flex'
+   cardBody.style.flexDirection= 'row'
+   cardBody.style.gap= '300px'
+
+  }
+}
+
+viewList.addEventListener("click", viewListFunction);
