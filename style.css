@@ -1,0 +1,68 @@
+.rounded-12 {
+  border-radius: 25px;
+  padding: 1%;
+	margin: 10px;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  margin-top: 3%;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.data {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2%;
+	
+}
+
+.cryptoImage{
+	width: 50px;
+	height: 50px;
+	padding-left: 18px ;
+	padding-top: 18px;
+	
+}
+.image{
+	width: 100%;
+	height: 25%;
+	
+	display: flex;
+	gap: 4%;
+}
+
+.coinName{
+	margin-top: 15px;
+}
+.card-text{
+	font-size: 15px;
+}
+
+.percentBorder{
+	border:2px solid yellow;
+	width: 38%;
+	text-align: center;
+	border-radius: 20px;
+	color: yellow;
+	padding: 10px;
+	display: flex;
+}
+.additionalDetails{
+margin-top: 30px;
+}
+
+.coinPrice{
+	color: yellow;
+}
