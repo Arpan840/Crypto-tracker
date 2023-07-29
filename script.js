@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       coinBox.style.flexDirection = "column";
       coinBox.style.gap = "";
       coinBox.style.paddingRight = ''
+      coinBox.style.justifyContent = "";
     }
     data.classList.remove("list-view");
   }
