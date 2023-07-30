@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     viewGrid.style.borderBottom = "2px solid blue";
     viewList.style.borderBottom = "";
 
-    // Restore original grid view HTML
+    
     data.innerHTML = originalGridViewHTML;
   }
 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     data.innerHTML = coins;
 
-    // Store the original grid view HTML after fetching data
+    
     originalGridViewHTML = coins;
   }
 
