@@ -97,3 +97,11 @@ margin-top: 30px;
   justify-content: flex-start;
   gap: 1rem;
 }
+
+
+ @media screen and (max-width: 800px) {
+	.coinTable{
+		width: 80%;
+		font-size: 55%;
+	}
+} 
